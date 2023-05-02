@@ -3,7 +3,7 @@
 
 
 def canUnlockAll(boxes):
-    '''
+    ''' 
         CanUnockAll
         ([boxes]): a list of list
     '''
@@ -24,5 +24,6 @@ def canUnlockAll(boxes):
                     # get the keys at the box that has been opened
                     # set the boxes with the keys to be open
                     for i in boxes[key]:
-                        unlocked[i] = True
+                        if i < len(unlocked):
+                            unlocked[i] = True
     return all(unlocked)
