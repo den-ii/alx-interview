@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+''' minOperations module '''
+
+
 def minOperations(n):
+    '''
+        (n): no of H
+    '''
+
     if n <= 1:
         return 0
     operations = 0
