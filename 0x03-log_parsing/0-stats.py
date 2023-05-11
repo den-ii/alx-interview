@@ -1,9 +1,12 @@
 #!/usr/bin/python3
+'''
+ 0-stats.py module
+ log-parsing
+'''
 import sys
 import re
 import signal
 
-print("yhh")
 ctrl_c_pressed = False
 line_count = 0
 file_size = 0
