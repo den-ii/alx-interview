@@ -1,10 +1,10 @@
 sysin = True
+keep track of file size
+keep track of line no
+keep track of status_codes {200: 0, 301: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
 while sysin:
     read line from stdin
     if no more line - set sysin to False or just break
-    keep track of file size
-    keep track of line no
-    keep track of status_codes {200: 0, 301: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
     increase line no by 1
     check if line is <IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>
     if true:
