@@ -2,7 +2,7 @@
 
 ## Tasks
 
-`0. Log parsing                             mandatory`
+<code>0. Log parsing                             mandatory</code>
 **_ Write a script that reads stdin line by line and computes metrics: _**
 
 Input format: <IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size> (if the format is not this one, the line must be skipped)
@@ -16,7 +16,7 @@ format: <status code>: <number>
 status codes should be printed in ascending order
 Warning: In this sample, you will have random value - it’s normal to not have the same output as this one.
 
-`
+<code>
 alexa@ubuntu:~/0x03-log_parsing$ cat 0-generator.py
 #!/usr/bin/python3
 import random
@@ -78,7 +78,7 @@ KeyboardInterrupt
 sleep(random.random())
 KeyboardInterrupt
 alexa@ubuntu:~/0x03-log_parsing$
-`
+<code/>
 
 Repo:
 
