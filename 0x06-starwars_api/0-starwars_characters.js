@@ -1,10 +1,10 @@
 #!/usr/bin/node
-const request = require('request');
+const request = require("request");
 
 let characters;
 
 request(
-  `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`,
+  `https://swapi-api.alx-tools.com/api/films/${process.argv[1]}`,
   async function (error, response, body) {
     if (error) {
       console.log(error);
