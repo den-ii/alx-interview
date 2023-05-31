@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 
-if (!process.argv[2]) {
+if (!process.argv[2] || process.argv[2] == 0 || !Number(process.argv[2])) {
   console.log('Please input arg');
 } else {
   request(
