@@ -12,7 +12,7 @@ if (!process.argv[2]) {
       }
       const newBody = await body;
       const characters = JSON.parse(newBody).characters;
-      console.log(characters);
+      // console.log(characters);
       if (characters && characters.length) {
         for (let character of characters) {
           const ll = await new Promise((resolve, reject) => {
