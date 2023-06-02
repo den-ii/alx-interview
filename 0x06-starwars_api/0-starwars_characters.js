@@ -1,27 +1,32 @@
 #!/usr/bin/node
-const request = require('request');
+const request = require("request");
 
 if (!process.argv[2]) {
-  console.log('Please input arg');
+  console.log("Please input arg");
 } else {
   request(
-    'https://swapi-api.alx-tools.com/api/films/' + process.argv[2],
+    "https://swapi-api.alx-tools.com/api/films/" + process.argv[2],
     async function (error, response, body) {
       if (error) {
         console.log(error);
       }
       const newBody = await body;
       const characters = JSON.parse(newBody).characters;
+      console.log(characters);
       if (characters && characters.length) {
-        characters.forEach((element) => {
-          request(element, async function (error, response, body) {
-            if (error) {
-              console.log(error);
-            }
-            const newBody = await body;
-            console.log(JSON.parse(newBody).name);
+        for (let character of characters) {
+          const ll = await new Promise((resolve, reject) => {
+            request(character, async function (error, response, body) {
+              if (error) {
+                reject(error);
+              }
+              const newBody = await body;
+              resolve(JSON.parse(newBody).name);
+            });
           });
-        });
+          console.log(ll);
+        }
       }
-    });
+    }
+  );
 }
