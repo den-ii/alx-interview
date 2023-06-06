@@ -1,6 +1,13 @@
 #!/usr/bin/python3
+"""
+rotate_2d_matrix_module
+"""
+
 
 def rotate_2d_matrix(matrix):
+    """
+        matrix(arg): 2d array
+    """
     n = len(matrix)
 
     for i in range(n):
